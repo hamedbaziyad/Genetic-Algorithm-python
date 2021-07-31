@@ -174,14 +174,8 @@ def Genetic_Algorithm(Crossover_Rate = 0.3, nPop = 20, Func = MinOne, MaxIt = 30
             Child1_Cost = [Func(Child1[0])]
             Child2_Cost = [Func(Child2[0])]
             
-            # This section prevents the answer from getting worse 
-            if Child1_Cost[0] > BestCost:
-                Child1 = [Pop['Position'].iloc[0]]
-                Child1_Cost = [BestCost]
-
-            if Child2_Cost[0] > BestCost:
-                Child2 = [Pop['Position'].iloc[0]]
-                Child2_Cost = [BestCost]               
+            
+              
                 
             Individual_1 = pd.DataFrame([Child1, Child1_Cost])
             Individual_2 = pd.DataFrame([Child2, Child2_Cost])
@@ -227,7 +221,7 @@ def Genetic_Algorithm(Crossover_Rate = 0.3, nPop = 20, Func = MinOne, MaxIt = 30
 
 
 GA = Genetic_Algorithm(Crossover_Rate = 0.3, nPop = 20, Func = MinOne, MaxIt = 100,
-                  Mutation_Rate = 0.2, Crossover_Func = Continuous_Uniform_Crossover,
+                  Mutation_Rate = 0.2, Crossover_Func = Uniform_Crossover,
                   Selection_Prob_Func = Weighting_By_Rank,
                   Selection_Algorithm = Tournament_Selection,
                   Tournament_Size = 4, nCon = 2,
