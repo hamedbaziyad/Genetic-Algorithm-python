@@ -1,6 +1,6 @@
 # Genetic-Algorithm-python
 This repository helps you to optimize an objective function by Genetic Algorithm (GA) in the Python environment.
-This project comprises seven files, namely Func.py, Initialization.py, Selection_Prob_Cal.py, Selection_Methods.py, Crossovers.py, Mutations.py, and CGA.py.
+This project comprises seven files, namely Func.py, Initialization.py, Selection_Prob_Cal.py, Selection_Methods.py, Crossovers.py, Mutations.py and CGA.py.
 ## 1. Func.py
 In this section, desired functions that you want to optimize are defined. The functions are utilized for calculating the costs of chromosomes. For instance, the MinOne and Sphere functions were represented there. You can add every function in this file.
 ## 2. Initialization.py
